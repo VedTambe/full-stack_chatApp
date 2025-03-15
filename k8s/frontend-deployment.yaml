@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: chat-app
+  namespace: chatapp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: frontend
@@ -14,7 +14,8 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: iemafzal/f-s_frontend:v1  
-        ports:
-        - containerPort: 80
+        - name: frontend
+          image: vedant1218/frontend:latest
+          ports:
+            - containerPort: 3000
+
