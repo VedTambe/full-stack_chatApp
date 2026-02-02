@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Code Check out') {
       steps {
-        git branch: 'master',
+        git branch: 'main',
           url: 'https://github.com/VedTambe/full-stack_chatApp.git'
       }
     }
